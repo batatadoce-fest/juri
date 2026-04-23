@@ -1,0 +1,1 @@
+import{C as e,G as t,L as n,_ as r,g as i}from"./render-CBcPzIdd.js";import{t as a}from"./QPage-CxtiVD8S.js";import{t as o}from"./_plugin-vue_export-helper-DSrzDOgY.js";var s=e({name:`JuriPage`});function c(e,o,s,c,l,u){return n(),r(a,{class:`flex flex-center`},{default:t(()=>[...o[0]||=[i(`h5`,null,`Juri Page`,-1)]]),_:1})}var l=o(s,[[`render`,c]]);export{l as default};
