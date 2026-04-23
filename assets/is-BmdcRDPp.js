@@ -1,0 +1,1 @@
+function e(e){return typeof e==`object`&&!!e&&Array.isArray(e)!==!0}function t(e){return typeof e==`number`&&isFinite(e)}export{e as n,t};
