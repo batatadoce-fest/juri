@@ -104,7 +104,7 @@ const getCriteriosPorCategoria = (categoria) => {
       return [
         ...base,
         { nome: 'Técnica de animação', nota: 5, slug: 'nota_tecnica' },
-        { nome: 'Efeitos', nota: 5, slug: 'nota_efeitos' },
+        { nome: 'Efeitos Sonoros', nota: 5, slug: 'nota_efeitos' },
         { nome: 'Trilha Sonora', nota: 5, slug: 'nota_trilha' },
       ]
     case '2d':
