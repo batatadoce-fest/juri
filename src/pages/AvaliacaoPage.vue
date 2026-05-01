@@ -130,7 +130,7 @@ const getCriteriosPorCategoria = (categoria) => {
       return [
         ...base,
         { nome: 'Animação', nota: 5, slug: 'nota_tecnica' },
-        { nome: 'Som', nota: 5, slug: 'nota_fotografia' },
+        { nome: 'Som', nota: 5, slug: 'nota_som' },
       ]
     default:
       return base
