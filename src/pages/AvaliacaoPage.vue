@@ -178,8 +178,22 @@ const carregarAvaliacaoExistente = () => {
 
     if (data.success && data.avaliacao) {
       criteriosDeAvaliacao.value.forEach((criterio) => {
-        if (Object.prototype.hasOwnProperty.call(data.avaliacao, criterio.slug)) {
-          const notaSalva = data.avaliacao[criterio.slug]
+        // Compatibilidade: aceita tanto 'nota_som' quanto 'nota_fotografia' para TCC
+        let slug = criterio.slug
+        if (slug === 'nota_som') {
+          if (Object.prototype.hasOwnProperty.call(data.avaliacao, 'nota_som')) {
+            const notaSalva = data.avaliacao['nota_som']
+            if (typeof notaSalva === 'number') {
+              criterio.nota = notaSalva
+            }
+          } else if (Object.prototype.hasOwnProperty.call(data.avaliacao, 'nota_fotografia')) {
+            const notaSalva = data.avaliacao['nota_fotografia']
+            if (typeof notaSalva === 'number') {
+              criterio.nota = notaSalva
+            }
+          }
+        } else if (Object.prototype.hasOwnProperty.call(data.avaliacao, slug)) {
+          const notaSalva = data.avaliacao[slug]
           if (typeof notaSalva === 'number') {
             criterio.nota = notaSalva
           }
